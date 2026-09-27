@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bhavadharini P | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7ff;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(35, 43, 92, 0.97);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 8%;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #64ffda;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #64ffda;
+        }
+
+
+        /* =========================
+           HOME
+        ========================= */
+
+        .home {
+            min-height: 88vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 60px 10%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8ecff,
+                    #f8f5ff,
+                    #e0f7fa
+                );
+        }
+
+        .home-content {
+            width: 58%;
+        }
+
+        .small-text {
+            font-size: 20px;
+            color: #5c6bc0;
+            margin-bottom: 5px;
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            color: #29327a;
+            margin-bottom: 8px;
+        }
+
+        .home-content h2 {
+            font-size: 26px;
+            color: #37474f;
+            margin-bottom: 18px;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            color: #546e7a;
+            max-width: 650px;
+        }
+
+
+        /* =========================
+           PHOTO
+        ========================= */
+
+        .profile-container {
+            width: 35%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-frame {
+            position: relative;
+
+            width: 225px;
+            height: 275px;
+
+            padding: 6px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #5c6bc0,
+                    #ab47bc,
+                    #26c6da
+                );
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 18px 35px rgba(63,81,181,0.25);
+
+            transition: 0.4s;
+        }
+
+        .profile-frame:hover {
+            transform: translateY(-8px);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            border-radius: 13px;
+
+            border: 4px solid white;
+        }
+
+
+        /* Decorative shape */
+
+        .profile-frame::after {
+            content: "";
+
+            position: absolute;
+
+            width: 55px;
+            height: 55px;
+
+            right: -18px;
+            bottom: -18px;
+
+            border-radius: 50%;
+
+            background: #64ffda;
+
+            z-index: -1;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            margin-top: 28px;
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 24px;
+
+            border-radius: 8px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #3949ab;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #283593;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            border: 2px solid #3949ab;
+            color: #3949ab;
+        }
+
+        .secondary-btn:hover {
+            background: #3949ab;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        section {
+            padding: 75px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #29327a;
+        }
+
+        .section-title p {
+            color: #78909c;
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-box {
+            max-width: 950px;
+
+            margin: auto;
+
+            padding: 30px;
+
+            background: #f5f7ff;
+
+            border-left: 5px solid #5c6bc0;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .about-box p {
+            font-size: 17px;
+            color: #455a64;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            background:
+                linear-gradient(
+                    135deg,
+                    #f1f3ff,
+                    #ffffff
+                );
+        }
+
+        .skills-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 22px;
+        }
+
+        .skill-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 25px rgba(63,81,181,0.18);
+        }
+
+        .skill-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card h3 {
+            color: #303f9f;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #607d8b;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            background: white;
+        }
+
+        .project-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #f8f9ff;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            border-top: 4px solid #5c6bc0;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card h3 {
+            color: #303f9f;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #546e7a;
+            font-size: 14px;
+        }
+
+        .project-tech {
+            margin-top: 15px;
+
+            color: #7e57c2;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8eaf6,
+                    #fce4ec
+                );
+        }
+
+        .education-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: white;
+
+            padding: 25px;
+
+            margin-bottom: 20px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.07);
+        }
+
+        .education-card h3 {
+            color: #3949ab;
+        }
+
+        .education-card p {
+            color: #607d8b;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================= */
+
+        .certifications {
+            background: white;
+        }
+
+        .cert-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .cert-card {
+            padding: 22px;
+
+            background: #f5f7ff;
+
+            border-radius: 10px;
+
+            border-left: 4px solid #ab47bc;
+
+            transition: 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateX(5px);
+        }
+
+        .cert-card h3 {
+            font-size: 16px;
+            color: #3949ab;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background:
+                linear-gradient(
+                    135deg,
+                    #29327a,
+                    #5c6bc0
+                );
+
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #e8eaf6;
+        }
+
+        .contact-container {
+            max-width: 800px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.12);
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 20px;
+
+            background: #1f275c;
+
+            color: white;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+                gap: 40px;
+            }
+
+            .home-content {
+                width: 100%;
+            }
+
+            .home-content h1 {
+                font-size: 42px;
+            }
+
+            .home-content h2 {
+                font-size: 22px;
+            }
+
+            .profile-container {
+                width: 100%;
+            }
+
+            .profile-frame {
+                width: 190px;
+                height: 235px;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        Bhavadharini<span>.</span>
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="home" id="home">
+
+
+    <div class="home-content">
+
+        <div class="small-text">
+            Hello, I'm
+        </div>
+
+        <h1>
+            Bhavadharini P
+        </h1>
+
+        <h2>
+            Electronics & Communication Engineering Student
+        </h2>
+
+        <p>
+            An enthusiastic learner focused on developing
+            technical knowledge, practical skills and
+            innovative solutions through continuous learning
+            and project experience.
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="resume.pdf"
+                download="Bhavadharini_P_Resume.pdf"
+                class="btn primary-btn">
+
+                Download Resume
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="btn secondary-btn">
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PHOTO -->
+
+    <div class="profile-container">
+
+        <div class="profile-frame">
+
+            <img src="./profile.jpeg" alt="Bhavadharini P">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="section-title">
+
+        <h2>
+            About Me
+        </h2>
+
+        <p>
+            A little about me
+        </p>
+
+    </div>
+
+
+    <div class="about-box">
+
+        <p>
+            I am an Electronics and Communication Engineering student
+            at Velammal College of Engineering and Technology, Madurai.
+            I enjoy learning new technologies, working on practical
+            projects and continuously improving my technical and
+            problem-solving skills. My academic experience has given
+            me opportunities to explore software development,
+            web technologies, databases, IoT and application-oriented
+            projects.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section class="skills" id="skills">
+
+    <div class="section-title">
+
+        <h2>
+            Technical Skills
+        </h2>
+
+        <p>
+            Technologies and skills
+        </p>
+
+    </div>
+
+
+    <div class="skills-container">
+
+
+        <div class="skill-card">
+
+            <div class="skill-icon">
+                ☕
+            </div>
+
+            <h3>
+                Java
+            </h3>
+
+            <p>
+                Core Java, OOP concepts and
+                application development.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-icon">
+                🌐
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
+            <p>
+                HTML, CSS and basic
+                responsive web development.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-icon">
+                🗄️
+            </div>
+
+            <h3>
+                SQL
+            </h3>
+
+            <p>
+                Database concepts,
+                queries and data handling.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-icon">
+                🎨
+            </div>
+
+            <h3>
+                UI/UX Design
+            </h3>
+
+            <p>
+                Basic UI/UX design and
+                Figma-based interface design.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-icon">
+                🧠
+            </div>
+
+            <h3>
+                Problem Solving
+            </h3>
+
+            <p>
+                Analytical thinking,
+                adaptability and teamwork.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section class="projects" id="projects">
+
+    <div class="section-title">
+
+        <h2>
+            Projects
+        </h2>
+
+        <p>
+            Academic and technical projects
+        </p>
+
+    </div>
+
+
+    <div class="project-container">
+
+
+        <!-- CAREER COMPASS -->
+
+        <div class="project-card">
+
+            <h3>
+                Career Compass
+            </h3>
+
+            <p>
+                A web-based career guidance application
+                developed with an interactive interface
+                to provide users with career-related
+                information.
+            </p>
+
+            <div class="project-tech">
+                HTML • CSS • JavaScript
+            </div>
+
+        </div>
+
+
+        <!-- AQUAGUARD -->
+
+        <div class="project-card">
+
+            <h3>
+                AquaGuard – Smart Water Quality System
+            </h3>
+
+            <p>
+                A smart water-quality analysis and
+                classification system that evaluates
+                water quality using multiple parameters
+                and provides an understandable
+                classification of water quality.
+            </p>
+
+            <div class="project-tech">
+                MambaTab • Machine Learning • WQI
+            </div>
+
+        </div>
+
+
+        <!-- GREENNEST -->
+
+        <div class="project-card">
+
+            <h3>
+                GreenNest
+            </h3>
+
+            <p>
+                A desktop application developed for
+                managing application data with a
+                graphical user interface and database
+                connectivity.
+            </p>
+
+            <div class="project-tech">
+                Java • Swing • MySQL
+            </div>
+
+        </div>
+
+
+        <!-- SMART WASTE -->
+
+        <div class="project-card">
+
+            <h3>
+                Smart Waste Segregation
+            </h3>
+
+            <p>
+                An Arduino-based project designed to
+                identify and segregate different types
+                of waste using sensors and an
+                automated mechanism.
+            </p>
+
+            <div class="project-tech">
+                Arduino • Sensors
+            </div>
+
+        </div>
+
+
+        <!-- FIRE SENSOR -->
+
+        <div class="project-card">
+
+            <h3>
+                Fire Sensor Detection
+            </h3>
+
+            <p>
+                A sensor-based project designed to
+                detect fire-related conditions and
+                provide an alert mechanism.
+            </p>
+
+            <div class="project-tech">
+                Arduino • Sensors
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="education" id="education">
+
+    <div class="section-title">
+
+        <h2>
+            Education
+        </h2>
+
+        <p>
+            Academic background
+        </p>
+
+    </div>
+
+
+    <div class="education-container">
+
+
+        <div class="education-card">
+
+            <h3>
+                Bachelor of Engineering – ECE
+            </h3>
+
+            <p>
+                Velammal College of Engineering and Technology,
+                Madurai
+            </p>
+
+            <p>
+                2023 – 2027
+            </p>
+
+            <p>
+                CGPA: <strong>8.70</strong>
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                Higher Secondary Certificate
+            </h3>
+
+            <p>
+                Keren Matric Higher Secondary School,
+                Madurai
+            </p>
+
+            <p>
+                2022 – 2023
+            </p>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <h3>
+                Secondary School Leaving Certificate
+            </h3>
+
+            <p>
+                Keren Matric Higher Secondary School,
+                Madurai
+            </p>
+
+            <p>
+                2020 – 2021
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section class="certifications">
+
+    <div class="section-title">
+
+        <h2>
+            Certifications & Activities
+        </h2>
+
+        <p>
+            Learning and achievements
+        </p>
+
+    </div>
+
+
+    <div class="cert-container">
+
+
+        <div class="cert-card">
+            <h3>
+                SAP ABAP Platform Fundamentals
+            </h3>
+        </div>
+
+
+        <div class="cert-card">
+            <h3>
+                NPTEL – Joy of Computing Using Python
+            </h3>
+        </div>
+
+
+        <div class="cert-card">
+            <h3>
+                NPTEL – Cloud Computing
+            </h3>
+        </div>
+
+
+        <div class="cert-card">
+            <h3>
+                NPTEL – Sensors & Actuators
+            </h3>
+        </div>
+
+
+        <div class="cert-card">
+            <h3>
+                UI/UX Design Internship – KevelCorp
+            </h3>
+        </div>
+
+
+        <div class="cert-card">
+            <h3>
+                Smart India Hackathon 2024
+            </h3>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>
+            Contact Me
+        </h2>
+
+        <p>
+            Let's connect
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-card">
+
+            <h3>
+                📧 Email
+            </h3>
+
+            <p>
+                pbhava230@gmail.com
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>
+                📞 Phone
+            </h3>
+
+            <p>
+                9361837913
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>
+                📍 Location
+            </h3>
+
+            <p>
+                Madurai, Tamil Nadu
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Bhavadharini P | Personal Portfolio
+
+</footer>
+
+
+</body>
+
+</html>
